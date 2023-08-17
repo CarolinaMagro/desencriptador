@@ -7,7 +7,7 @@ namespace desencriptador_demo
 {
 
     [TestFixture]
-    public class Dummy
+    public class Desencriptador
     {
         public int InvA(Dictionary<string, string> tablaDeSimbolos, int a)
         {
@@ -98,7 +98,7 @@ namespace desencriptador_demo
             return MSJReturn;
         }
         [Test]
-        public void Desencriptador()
+        public void Test_Desencriptador()
         {
             List<string> mensajeEnviado = new List<string>() {"J]", "BX", "“B", "X+", "K]", "BX", "“B", "X+", "K]",
              "BX", "“B", "XJ", "K6", "B9", "L9", "2”", "KZ", "7I", "K:", ":C", "K,", "!H", "9&", "K6", "!,", "YL",
