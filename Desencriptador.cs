@@ -9,6 +9,8 @@ namespace desencriptador_demo
     [TestFixture]
     public class Desencriptador
     {
+        // Función para calcular el inverso multiplicativo modular de 'a' en el contexto de la tabla de símbolos.
+        // Utiliza el algoritmo de Euclides extendido.
         public int InvA(Dictionary<string, string> tablaDeSimbolos, int a)
         {
             //A^-1
@@ -39,6 +41,7 @@ namespace desencriptador_demo
             a_1 = v[k - 1];
             return a_1;
         }
+        // Función para desencriptar una lista de mensajes utilizando la tabla de símbolos, 'b' y 'a'.
         public string DesEncriptation(List<string> MSJ, Dictionary<string, string> tablaDeSimbolos, int b, int a)
         {
             Dictionary<string, string> TableSymbolEncripted = new Dictionary<string, string>();
@@ -65,6 +68,7 @@ namespace desencriptador_demo
             Console.WriteLine("El mensaje obtenido es: " + MSJReturn);
             return MSJReturn;
         }
+        // Función similar a DesEncriptation pero con proceso de desencriptación ligeramente diferente y tabla de correspondencias.
         public string DesEncriptationA(List<string> MSJ, Dictionary<string, string> tablaDeSimbolos, int b, int a)
         {
             Dictionary<string, string> TableSymbolEncripted = new Dictionary<string, string>();
