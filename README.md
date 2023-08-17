@@ -1,10 +1,47 @@
-# desencriptador_demo
-//Hay dos métodos que use, uno utilizando el inverso de a y el otro con la fórmula Y=a*x+b. Esta última no se porque anda/falla, pero el mensaje sale legible y esté además genera una tabla con los caracteres desencriptados(buscas la letra desencriptada y esta la letra original).
-//El código está modularizado como para que reciba cualquier mensaje con el formato lista de strings, la tabla de caracteres con su valor con el formato de una lista de diccionarios de string el valor de "a" y el de "b".( DesEncriptation(List<string> MSJ, Dictionary<string, string> tablaDeSimbolos, int b, int a)). También cree un método que obtiene el inverso de a con el algoritmo de euclides. 
-//Le adjunto también capturas del código, por si no tiene la herramienta para ejecutarlo.
+<h1>Desencriptador Demo Readme</h1>
+
+<p>Este proyecto contiene una clase llamada <strong>Desencriptador</strong> que se utiliza para desencriptar mensajes utilizando un algoritmo específico. El algoritmo de desencriptación se basa en una serie de operaciones matemáticas y utiliza una tabla de símbolos para mapear caracteres a valores numéricos y viceversa.</p>
+
+<h2>Funciones Principales</h2>
+
+<h3>InvA</h3>
+
+<p><code>public int InvA(Dictionary&lt;string, string&gt; tablaDeSimbolos, int a)</code></p>
+
+<p>Esta función calcula el inverso multiplicativo modular de un número <code>a</code> dado en el contexto de la tabla de símbolos proporcionada. Utiliza un algoritmo iterativo que involucra las operaciones de Euclides extendido para encontrar el inverso modular de <code>a</code>. El resultado es utilizado posteriormente en el proceso de desencriptación.</p>
+
+<h3>DesEncriptation</h3>
+
+<p><code>public string DesEncriptation(List&lt;string&gt; MSJ, Dictionary&lt;string, string&gt; tablaDeSimbolos, int b, int a)</code></p>
+
+<p>Esta función se encarga de desencriptar una lista de mensajes utilizando la tabla de símbolos, y los valores <code>a</code> y <code>b</code> proporcionados. Realiza una serie de cálculos matemáticos en cada caracter encriptado del mensaje para obtener el caracter original. El resultado final es una cadena de texto que representa el mensaje desencriptado.</p>
+
+<h3>DesEncriptationA</h3>
+
+<p><code>public string DesEncriptationA(List&lt;string&gt; MSJ, Dictionary&lt;string, string&gt; tablaDeSimbolos, int b, int a)</code></p>
+
+<p>Esta función es similar a la función <code>DesEncriptation</code>, pero realiza el proceso de desencriptación de manera ligeramente diferente. También muestra una tabla de correspondencias entre caracteres encriptados y desencriptados junto con los valores numéricos involucrados en el proceso.</p>
+
+<h2>Uso</h2>
+
+<p>La función <code>Test_Desencriptador</code> en la clase <code>Desencriptador</code> contiene ejemplos de cómo utilizar las funciones de desencriptación. Utiliza una tabla de símbolos <code>TableSymbol</code> y dos listas de mensajes encriptados <code>mensajeEnviado</code> y <code>mensajeRecibido</code>. Luego, llama a las funciones <code>DesEncriptation</code> y <code>DesEncriptationA</code> con valores específicos de <code>a</code> y <code>b</code> para mostrar el proceso de desencriptación y los resultados obtenidos.</p>
+
+<h2>Notas Importantes</h2>
+
+<ul>
+  <li>La clase <code>Desencriptador</code> contiene algoritmos y funciones matemáticas para la desencriptación de mensajes. Es importante entender la lógica detrás de estos algoritmos antes de modificar o utilizar el código en un entorno de producción.</li>
+  <li>La tabla de símbolos <code>TableSymbol</code> mapea caracteres a valores numéricos y se utiliza en el proceso de desencriptación. Asegúrate de que esta tabla esté correctamente definida antes de utilizar las funciones de desencriptación.</li>
+  <li>Los valores de <code>a</code> y <code>b</code> utilizados en las funciones <code>DesEncriptation</code> y <code>DesEncriptationA</code> afectan el resultado de la desencriptación. Asegúrate de proporcionar valores adecuados para obtener los resultados esperados.</li>
+</ul>
+
+<h2>Advertencia</h2>
+
+<p>Este código se proporciona solo con fines educativos y de demostración. No se garantiza su seguridad ni su eficacia en entornos de producción. Si deseas utilizar un algoritmo de encriptación o desencriptación en un entorno real, es recomendable utilizar bibliotecas y métodos probados y seguros.</p>
+
+
+
 //OUTPUT
-//Test Name:	caro
-//Test Outcome:	Passed
+
 //Result StandardOutput:	
 //El mensaje obtenido es: “MAYDAY, MAYDAY, MAYDAY“ LATITUD 38° 11´ NORTE LONGITUD 47° 19´ OESTE, U-573 AVERIADO Y AL GARETE.
 //El mensaje obtenido es: U 580 NAVEGANDO EN LA 3ONA.TIEMPO DE ARRIBO, APROYI“ADA“ENTE 9 HORAS.RESISTAN!
